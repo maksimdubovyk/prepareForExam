@@ -13,7 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      TEST_TEXT: "Ваш текст для виводу"
+      TEXT: "!!!!!!!!!!!!"
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
@@ -24,11 +26,5 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Create .env file
-      run: echo 'TEXT="Ваш текст для виводу"' > .env
-    - name: Load .env file
-      run: |
-        echo "Loading .env file"
-        source .env
     - name: Run script
       run: python main.py "$TEXT"
