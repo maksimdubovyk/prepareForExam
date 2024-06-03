@@ -29,7 +29,7 @@ jobs:
     - name: Run script
       run: |
         # echo $TEXT
+        echo ${{env.TEXT}}
+        # echo env.TEXT
         # echo ${{TEXT}}
-         echo env.TEXT
-        # echo {{TEXT}}
         
