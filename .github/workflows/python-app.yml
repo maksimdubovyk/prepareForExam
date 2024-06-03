@@ -28,5 +28,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run script
       run: |
-        echo "${{env.TEXT}}"
+        echo ${{env.TEXT}}
         
