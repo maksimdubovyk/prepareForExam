@@ -31,4 +31,4 @@ jobs:
         echo "Loading .env file"
         source .env
     - name: Run script
-      run: python print_text.py "$TEXT"
+      run: python main.py "$TEXT"
